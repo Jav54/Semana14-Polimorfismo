@@ -22,11 +22,12 @@ public class Cubo extends Cuadrado{
     }
     @Override
     double calcularPerimetro() {
-        return 0;
+        a = listaPuntos.get(0).calcularDistancia3D(listaPuntos.get(1));
+        double perimetro=12*a;
+        return perimetro;
     }
     @Override
     double calcularArea() {
-        a = listaPuntos.get(0).calcularDistancia3D(listaPuntos.get(1));
         double area = (a*a)*6;
         return area;
     }

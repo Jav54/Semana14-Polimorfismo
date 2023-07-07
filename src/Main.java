@@ -58,6 +58,7 @@ public class Main {
                         System.out.println("Perimetro: "+listaFiguras.get(i).calcularPerimetro());
                         System.out.println("Area: "+listaFiguras.get(i).calcularArea());
                         System.out.println("Volumen: "+listaFiguras.get(i).calcularVolumen());
+                        System.out.println("\n");
                     }
                     cont=1;
                     break;

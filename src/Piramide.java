@@ -33,21 +33,28 @@ public class Piramide extends Triangulo{
     }
     @Override
     double calcularPerimetro() {
-        return 0;
-    }
-    @Override
-    double calcularArea() {
         a = listaPuntos.get(0).calcularDistancia3D(listaPuntos.get(1));
         b = listaPuntos.get(1).calcularDistancia3D(listaPuntos.get(2));
         c = listaPuntos.get(0).calcularDistancia3D(listaPuntos.get(2));
-        double area1 = areaAux(a,b,c);
-
+        double perimetrobase = a+b+c;
 
         d = listaPuntos.get(0).calcularDistancia3D(listaPuntos.get(3));
         e = listaPuntos.get(1).calcularDistancia3D(listaPuntos.get(3));
-        double area2 = areaAux(a,d,e);
+        double perimetro2 = a+d+e;
 
         f = listaPuntos.get(2).calcularDistancia3D(listaPuntos.get(3));
+        double perimetro3 = b+e+f;
+
+        double perimetro4 = c+d+f;
+
+        return perimetrobase+perimetro2+perimetro3+perimetro4;
+    }
+    @Override
+    double calcularArea() {
+        double area1 = areaAux(a,b,c);
+
+        double area2 = areaAux(a,d,e);
+
         double area3 = areaAux(b,e,f);
 
         double area4 = areaAux(c,d,f);
